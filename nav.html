@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">DevNest</div>
+        <div class="menu" id="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="login-btn" id="loginBtn">Potal</button>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('click', function(){
+            const menu = document.getElementById('menu');
+            const hamburger = document.querySelector('.hamburger');
+
+            hamburger.addEventListener('click', function(){
+                menu.classList.toggle('active');
+            });
+
+            document.getElementById('loginBtn').addEventListener('click', function(){
+                window.location.href = 'https://example.com';
+            });
+        });
+    </script>
+</body>
+</html>
